@@ -272,6 +272,12 @@
     <Compile Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.Designer.cs">
       <DependentUpon>WinClassicMinesweeper.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicPaintBrush.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\Win95\Win95Apps\WinClassicPaintBrush.Designer.cs">
+      <DependentUpon>WinClassicPaintBrush.cs</DependentUpon>
+    </Compile>
     <Compile Include="OS\Win95\Win95Apps\WinClassicTerminal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -551,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\MineSweeper\WinClassicMinesweeper.resx">
       <DependentUpon>WinClassicMinesweeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicPaintBrush.resx">
+      <DependentUpon>WinClassicPaintBrush.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OS\Win95\Win95Apps\WinClassicTerminal.resx">
       <DependentUpon>WinClassicTerminal.cs</DependentUpon>
@@ -837,6 +846,7 @@
     <None Include="Resources\msdosprompt.png" />
     <None Include="Resources\SeizureWarning.png" />
     <None Include="Resources\MSDOSPromptToolStripMenuItem1.Image.png" />
+    <None Include="Resources\startbutton_clicked.png" />
     <Content Include="Resources\std_beep.wav" />
     <Content Include="Resources\std_gobeep.wav" />
     <None Include="Resources\termCopy.png" />
@@ -881,6 +891,50 @@
     <None Include="Resources\win95plustravelwallpaper.jpg" />
     <None Include="Resources\WinClassicDrive.png" />
     <None Include="Resources\WinClassicAddressBookBig.png" />
+    <None Include="Resources\WinClassicStartClicked.png" />
+    <None Include="Resources\WinClassicPaint.png" />
+    <None Include="Resources\Win95IconPaintAbout.png" />
+    <None Include="Resources\WinClassicPaintBrushColorPreviewBackground.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonStar.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonSelectNormal.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonRubber.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonFill.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonPen.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonBrush.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonSprayer.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonPicker.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonZoom.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonText.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonLine.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonSquareLine.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonTriangle.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonDeformedTriangle.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonCircle.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonCircledTriangle.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonBrushOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonCircledTriangleOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonCircleOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonDeformedTriangleOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonFillOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonLineOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonPenOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonPickerOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonRubberOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonSelectNormalOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonSprayerOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonSquareLineOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonStarOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonTextOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonTriangleOver.png" />
+    <None Include="Resources\WinClassicPaintBrushButtonZoomOver.png" />
+    <None Include="Resources\WinClassicCursorNormal.png" />
+    <None Include="Resources\WinCLassicPaintBrushCursorBrush.png" />
+    <None Include="Resources\WinClassicPaintBrushCursorPen.png" />
+    <None Include="Resources\WinClassicPaintBrushCursorRubber.png" />
+    <None Include="Resources\WinClassicPaintBrushCursorShape.png" />
+    <None Include="Resources\WinClassicPaintBrushCursorColorpicker.png" />
+    <None Include="Resources\WinClassicPaintBrushCursorColorpicker2.png" />
+    <None Include="Resources\WinClassicPaintBrushCursorPen2.png" />
     <Content Include="Resources\WinClassic\16Color.png" />
     <Content Include="Resources\WinClassic\256Color.png" />
     <None Include="Resources\WinClassic\tada.wav" />

@@ -41,7 +41,7 @@ namespace Histacom2.OS.Win95
         public Windows95()
         {
             InitializeComponent();
-            //startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
+            startmenu.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             ProgramsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             AccessoriesToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
             CommunicationsToolStripMenuItem.DropDown.Paint += (sender, args) => Engine.Paintbrush.PaintClassicBorders(sender, args, 2);
@@ -91,6 +91,9 @@ namespace Histacom2.OS.Win95
 
             // Hide the Startmenu
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
 
             // Check for and set VM Mode
             if (this.FormBorderStyle != FormBorderStyle.None)
@@ -170,6 +173,9 @@ namespace Histacom2.OS.Win95
         // StartButton Click
         private void startbutton_Click(object sender, EventArgs e)
         {
+            startbutton.Image = Properties.Resources.WinClassicStartClicked; // Change the Startbutton texture to clicked Orb Texture
+            startbutton.Refresh();
+            startbutton.Visible = true;
             startmenu.Show();
             if (taskbar.Visible) taskbar.BringToFront();
             startmenu.BringToFront();
@@ -216,6 +222,9 @@ namespace Histacom2.OS.Win95
             {
                 rightclickbackproperties.Hide();
                 startmenu.Hide();
+                startbutton.Image = Properties.Resources.WinClassicStart; // Resets the clicked start orb texture
+                startbutton.Refresh();
+                startbutton.Visible = true;
 
                 heldDownItem = desktopicons.GetItemAt(e.X, e.Y);
                 if (heldDownItem != null)
@@ -243,6 +252,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
         private void InternetExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -252,6 +264,9 @@ namespace Histacom2.OS.Win95
             ie.BringToFront();
             ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void desktopicons_DoubleClick(object sender, EventArgs e)
@@ -272,6 +287,9 @@ namespace Histacom2.OS.Win95
                         ie.BringToFront();
                         ie.FormClosing += new FormClosingEventHandler(InternetExplorer4_Closing);
                         startmenu.Hide();
+                        startbutton.Image = Properties.Resources.WinClassicStart;
+                        startbutton.Refresh();
+                        startbutton.Visible = true;
                     }
                     else if (objListViewItem.Text == "My Computer") // TODO: Implement slightly limited explorer (with no treeview and a new window each time ya go into a dir)
                     {
@@ -279,6 +297,9 @@ namespace Histacom2.OS.Win95
                         AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                         app.BringToFront();
                         startmenu.Hide();
+                        startbutton.Image = Properties.Resources.WinClassicStart;
+                        startbutton.Refresh();
+                        startbutton.Visible = true;
                     }
                     else if (objListViewItem.Text == "Network Neighborhood")
                     {
@@ -320,6 +341,9 @@ namespace Histacom2.OS.Win95
                             AddTaskBarItem(app, app.Tag.ToString(), "Windows Explorer", Properties.Resources.WinClassicFileExplorer);
                             app.BringToFront();
                             startmenu.Hide();
+                            startbutton.Image = Properties.Resources.WinClassicStart;
+                            startbutton.Refresh();
+                            startbutton.Visible = true;
                         }
                         else
                         {
@@ -341,6 +365,9 @@ namespace Histacom2.OS.Win95
 
             webchat.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
         public void NonImportantApp_Closing(object sender, FormClosingEventArgs e)
         {
@@ -363,6 +390,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         public void AddTaskBarItem(Form Application, string ApplicationID, string ApplicationName, Image ApplicationIcon)
@@ -404,6 +434,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void storyTest1ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -419,6 +452,9 @@ namespace Histacom2.OS.Win95
             AddTaskBarItem(app, app.Tag.ToString(), "MS-DOS Prompt", Properties.Resources.MSDOSPromptToolStripMenuItem1_Image);
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void PropertiesToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -429,6 +465,9 @@ namespace Histacom2.OS.Win95
             AddTaskBarItem(app, app.Tag.ToString(), "Themes", null);
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void TimeDistorterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -438,6 +477,9 @@ namespace Histacom2.OS.Win95
             AddTaskBarItem(app, app.Tag.ToString(), "Time Distorter", null);
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
         private void FTPClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -446,6 +488,9 @@ namespace Histacom2.OS.Win95
             AddTaskBarItem(app, app.Tag.ToString(), "FTP Client", null);
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void CalculatorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -459,6 +504,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void desktopupdate_Tick(object sender, EventArgs e)
@@ -549,6 +597,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void desktopicons_MouseMove(object sender, MouseEventArgs e)
@@ -564,6 +615,9 @@ namespace Histacom2.OS.Win95
         {
             heldDownItem = null;
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void GuessTheNumberToolStripMenuItem_Click(object sender, EventArgs e)
@@ -577,6 +631,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void taskbar_Paint(object sender, PaintEventArgs e)
@@ -637,6 +694,9 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
         }
 
         private void StartRunnerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -650,12 +710,40 @@ namespace Histacom2.OS.Win95
 
             app.BringToFront();
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
 
         }
 
         private void desktopicons_Click(object sender, EventArgs e)
         {
             startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
+        }
+
+        private void PaintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WinClassicPaintBrush pb = new WinClassicPaintBrush();
+            WinClassic app = wm.Init(pb, "Paintbrush", Properties.Resources.WinClassicPaint, true, true);
+            AddTaskBarItem(app, app.Tag.ToString(), "Paintbrush", Properties.Resources.WinClassicPaint);
+
+            nonimportantapps.Add(app);
+            nonimportantapps[nonimportantapps.Count - 1].BringToFront();
+            nonimportantapps[nonimportantapps.Count - 1].FormClosing += new FormClosingEventHandler(NonImportantApp_Closing);
+
+            app.BringToFront();
+            startmenu.Hide();
+            startbutton.Image = Properties.Resources.WinClassicStart;
+            startbutton.Refresh();
+            startbutton.Visible = true;
+        }
+
+        private void desktopicons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

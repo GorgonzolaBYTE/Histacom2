@@ -511,6 +511,7 @@ namespace Histacom2.OS.Win95
             this.PaintToolStripMenuItem.Name = "PaintToolStripMenuItem";
             this.PaintToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
             this.PaintToolStripMenuItem.Text = "Paintbrush";
+            this.PaintToolStripMenuItem.Click += new System.EventHandler(this.PaintToolStripMenuItem_Click);
             // 
             // PhoneDialerToolStripMenuItem
             // 
@@ -611,7 +612,7 @@ namespace Histacom2.OS.Win95
             this.EmptyToolStripMenuItem.BackgroundImage = global::Histacom2.Properties.Resources.sliversilver;
             this.EmptyToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EmptyToolStripMenuItem.Name = "EmptyToolStripMenuItem";
-            this.EmptyToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.EmptyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.EmptyToolStripMenuItem.Text = "(Empty)";
             // 
             // InternetExplorerToolStripMenuItem
@@ -790,7 +791,7 @@ namespace Histacom2.OS.Win95
             this.ControlPanelToolStripMenuItem.Image = global::Histacom2.Properties.Resources.Win95ControlPanelIcon;
             this.ControlPanelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ControlPanelToolStripMenuItem.Name = "ControlPanelToolStripMenuItem";
-            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ControlPanelToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.ControlPanelToolStripMenuItem.Text = "Control Panel";
             // 
             // PrintersToolStripMenuItem
@@ -800,7 +801,7 @@ namespace Histacom2.OS.Win95
             this.PrintersToolStripMenuItem.Image = global::Histacom2.Properties.Resources.Win95PrintersFolder;
             this.PrintersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PrintersToolStripMenuItem.Name = "PrintersToolStripMenuItem";
-            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PrintersToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.PrintersToolStripMenuItem.Text = "Printers";
             // 
             // TaskbarToolStripMenuItem
@@ -809,7 +810,7 @@ namespace Histacom2.OS.Win95
             this.TaskbarToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TaskbarToolStripMenuItem.BackgroundImage")));
             this.TaskbarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TaskbarToolStripMenuItem.Name = "TaskbarToolStripMenuItem";
-            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.TaskbarToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.TaskbarToolStripMenuItem.Text = "Taskbar";
             // 
             // FindToolStripMenuItem
@@ -993,6 +994,7 @@ namespace Histacom2.OS.Win95
             this.desktopicons.Size = new System.Drawing.Size(640, 480);
             this.desktopicons.TabIndex = 6;
             this.desktopicons.UseCompatibleStateImageBehavior = false;
+            this.desktopicons.SelectedIndexChanged += new System.EventHandler(this.desktopicons_SelectedIndexChanged);
             this.desktopicons.DoubleClick += new System.EventHandler(this.desktopicons_DoubleClick);
             this.desktopicons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.desktop_mousedown);
             this.desktopicons.MouseMove += new System.Windows.Forms.MouseEventHandler(this.desktopicons_MouseMove);
@@ -1099,6 +1101,7 @@ namespace Histacom2.OS.Win95
         internal System.Windows.Forms.MenuStrip startmenuitems;
         internal Histacom2.Engine.UI.ClassicStartMenuItem ProgramsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem AccessoriesToolStripMenuItem;
+        //internal Histacom2.Engine.UI.ClassicStartMenuItem AccessoriesToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem CommunicationsToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem InternetConnectionWizardToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem NetMeetingToolStripMenuItem;

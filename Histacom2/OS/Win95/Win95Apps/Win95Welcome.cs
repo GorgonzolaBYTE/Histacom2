@@ -21,5 +21,10 @@ namespace Histacom2.OS.Win95.Win95Apps
         {
             ParentForm.Close();
         }
+
+        private void Win95Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
